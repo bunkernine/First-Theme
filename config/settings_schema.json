@@ -8,12 +8,12 @@
         "theme_support_url": "https://support.com"
     },
     {
-        "name": "t:settings_schema.logo.name",
+        "name": "Logo",
         "settings": [
             {
                 "type": "image_picker",
                 "id": "logo",
-                "label": "t:settings_schema.logo.settings.logo_image.label"
+                "label": "logo_image label"
             },
             {
                 "type": "range",
@@ -23,13 +23,13 @@
                 "step": 10,
                 "default": 100,
                 "unit": "px",
-                "label": "t:settings_schema.logo.settings.logo_width.label"
+                "label": "logo_width label"
             },
             {
                 "type": "image_picker",
                 "id": "favicon",
-                "label": "t:settings_schema.logo.settings.favicon.label",
-                "info": "t:settings_schema.logo.settings.favicon.info"
+                "label": "favicon label",
+                "info": "favicon info"
             }
         ]
     }
