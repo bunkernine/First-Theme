@@ -1,8 +1,7 @@
-{%  paginate collection.products by 20  %}
-    {% for product in collection.products %}
+
+    {% for product in section.settings.collection.products %}
         <p>{{ product.title }}</p>
     {% endfor %}
-{% endpaginate %}
 
 {%  schema  %}
 {
