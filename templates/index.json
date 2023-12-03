@@ -4,7 +4,7 @@
       "type": "main-collection",
       "settings": {
         "products_per_page": 16,
-        "collection": "discount"
+        "collection": "all"
       }
     }
   },
