@@ -1,0 +1,28 @@
+{%  paginate collection.products by 20  %}
+    {% for product in collection.products %}
+        <p>{{ product.title }}</p>
+    {% endfor %}
+{% endpaginate %}
+
+{%  schema  %}
+{
+    "name": "Collection",
+    "class": "collection",
+    "settings": [
+        {
+            "type": "range",
+            "id": "products_per_page",
+            "min": 8,
+            "max": 24,
+            "step": 4,
+            "default": 16,
+            "label": "Products per page"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection"
+        }
+    ]
+}
+{% endschema %}
