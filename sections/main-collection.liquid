@@ -1,6 +1,6 @@
 
     {% for product in section.settings.collection.products %}
-        <p>{{ product.title }}</p>
+        <a href="{{ product.url }}">{{ product.title }}</a>
     {% endfor %}
 
 {%  schema  %}
