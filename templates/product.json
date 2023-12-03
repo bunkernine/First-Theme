@@ -7,16 +7,10 @@
           "type": "title",
           "settings": {
           }
-        },
-        "08dafb9f-6b25-484e-b348-c71250341571": {
-          "type": "price",
-          "settings": {
-          }
         }
       },
       "block_order": [
-        "3b62f343-354d-4337-b736-25c61b693b23",
-        "08dafb9f-6b25-484e-b348-c71250341571"
+        "3b62f343-354d-4337-b736-25c61b693b23"
       ],
       "settings": {
       }
