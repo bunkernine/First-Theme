@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ request.locale.iso_code }}">
-  <head>
-
-    <!-- theme head start -->
-
+<head>
     <title>{{- page_title -}}</title>
 
     {% if page_description %}
-        <meta name="description" content="{{ page_description | escape }}">
+        <meta name="description" content="{{ page_description | escape }}">        
     {% endif %}
 
     <link rel="canonical" href="{{ canonical_url }}">
 
     {{ content_for_header }}
+</head>
 
-    <!-- theme head end -->
-  </head>
-  <body>
+<body>
+    
+    {% sections 'header-group' %}
 
-    {%  sections 'header-group'  %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main>
         {{ content_for_layout }}
     </main>
-  </body>
+
+    {% sections 'footer-group' %}
+
+</body>
 </html>
