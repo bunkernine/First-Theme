@@ -6,6 +6,10 @@
 
     <title>{{- page_title -}}</title>
 
+    {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
     {{ content_for_header }}
 
     <!-- theme head end -->
