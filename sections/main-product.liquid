@@ -16,6 +16,15 @@
     {{ form |  payment_button }}
 {% endform %}
 
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'title' %}
+            <p>{{ product.title }}</p>
+            
+    {% endcase %}    
+{% endfor %}
+
+
 {% schema %}
 {
     "name": "Main PRODUCT",
@@ -26,11 +35,6 @@
         {
             "name": "Title",
             "type": "title",
-            "settings": []
-        },
-        {
-            "name": "Price",
-            "type": "price",
             "settings": []
         }
     ]
