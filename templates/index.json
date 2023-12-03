@@ -1,11 +1,20 @@
 {
   "sections": {
     "main-collection": {
-        "type": "main-collection",
-        "settings": {}
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 16
+      }
+    },
+    "fcf71111-4041-4b39-bc74-9e1216514110": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 16
+      }
     }
   },
   "order": [
-    "main-collection"
+    "main-collection",
+    "fcf71111-4041-4b39-bc74-9e1216514110"
   ]
 }
