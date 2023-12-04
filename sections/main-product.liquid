@@ -15,6 +15,32 @@
   {%- endif -%}
 
   
+  <div>
+
+    <div class="media"></div>
+
+    <div class="product__info-wrapper">
+        <product-info>
+
+
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when '@app' %}
+                    {% render block %}
+
+                {% when 'text' %}
+                    <p>{{ block.settings.text }}</p>
+                
+                    
+            {% endcase %}
+        {% endfor %}
+
+
+        </product-info>
+    </div>
+
+  </div>
+
 
 </section>
 
@@ -31,7 +57,13 @@
         {
             "type": "text",
             "name": "Text",
-            "settings": []
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Text"
+                }
+            ]
         },
         {
             "type": "title",
