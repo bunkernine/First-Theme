@@ -2,6 +2,17 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "7e9479e7-ef03-4b43-833f-4e9542a1550c": {
+          "type": "text",
+          "settings": {
+            "text": "Hello"
+          }
+        }
+      },
+      "block_order": [
+        "7e9479e7-ef03-4b43-833f-4e9542a1550c"
+      ],
       "settings": {
       }
     }
