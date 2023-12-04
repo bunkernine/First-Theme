@@ -1,57 +1,67 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+{%- if product.quantity_price_breaks_configured? -%}
+  {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+
 {% assign target = product.selected_or_first_available_variant %}
 
 {% for block in section.blocks %}
-    {% case block.type %}
-        {% when 'title' %}
-            <p>{{ product.title }}</p>
-        {% when 'price' %}
+  {% case block.type %}
+    {% when 'title' %}
+      <p>{{ product.title }}</p>
+    {% when 'price' %}
 
-            <ol>
-                <li>compare at price: {{ product.compare_at_price | money }}</li>
-                <li>compare at price (max): {{ product.compare_at_price_max | money }}</li>
-                <li>compare at price (min): {{ product.compare_at_price_min | money }}</li>
-                <li>compare at price varies?: {{ product.compare_at_price_varies }}</li>
-            </ol>
+      <ol>
+        <li>compare at price: {{ product.compare_at_price | money }}</li>
+        <li>compare at price (max): {{ product.compare_at_price_max | money }}</li>
+        <li>compare at price (min): {{ product.compare_at_price_min | money }}</li>
+        <li>compare at price varies?: {{ product.compare_at_price_varies }}</li>
+      </ol>
 
-            <ol>
-                <li>price: {{ product.price | money }}</li>
-                <li>price (max): {{ product.price_max | money }}</li>
-                <li>price (min): {{ product.price_min | money }}</li>
-                <li>price varies?: {{ product.price_varies }}</li>
-            </ol>
+      <ol>
+        <li>price: {{ product.price | money }}</li>
+        <li>price (max): {{ product.price_max | money }}</li>
+        <li>price (min): {{ product.price_min | money }}</li>
+        <li>price varies?: {{ product.price_varies }}</li>
+      </ol>
 
-        {% when 'inventory' %}
-            <p>inventory management: {{ target.inventory_management }}</p>
-            <p>inventory quantity: {{ target.inventory_quantity  }}</p>
-            <p>inventory policy: {{ target.inventory_policy }}</p>
-        
+    {% when 'inventory' %}
+      <p>inventory management: {{ target.inventory_management }}</p>
+      <p>inventory quantity: {{ target.inventory_quantity }}</p>
+      <p>inventory policy: {{ target.inventory_policy }}</p>
 
-    {% endcase %}    
+
+  {% endcase %}
 {% endfor %}
 
 
 {% schema %}
-{
+  {
     "name": "Main PRODUCT",
     "tag": "section",
     "class": "hola",
     "settings": [],
     "blocks": [
-        {
-            "name": "Title",
-            "type": "title",
-            "settings": []
-        },
-        {
-            "name": "Price",
-            "type": "price",
-            "settings": []
-        },
-        {
-            "name": "Inventory",
-            "type": "inventory",
-            "settings": []
-        }
+      {
+        "name": "Title",
+        "type": "title",
+        "settings": []
+      }, {
+        "name": "Price",
+        "type": "price",
+        "settings": []
+      }, {
+        "name": "Inventory",
+        "type": "inventory",
+        "settings": []
+      }
     ]
-}
+  }
 {% endschema %}
