@@ -9,6 +9,8 @@
 
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
 </head>
 
