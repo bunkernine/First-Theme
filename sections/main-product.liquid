@@ -13,5 +13,98 @@
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
+
   
+
 </section>
+
+{% schema %}
+{
+    "name": "Main Product",
+    "tag": "section",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "@app"
+        },
+        {
+            "type": "text",
+            "name": "Text",
+            "settings": []
+        },
+        {
+            "type": "title",
+            "name": "Title",
+            "limit": 1
+        },
+        {
+            "type": "price",
+            "name": "Price",
+            "limit": 1
+        },
+        {
+            "type": "sku",
+            "name": "SKU",
+            "limit": 1
+        },
+        {
+            "type": "inventory",
+            "name": "Inventory",
+            "limit": 1,
+            "settings": []
+        },
+        {
+            "type": "quantity_selector",
+            "name": "Quantity Selector",
+            "limit": 1
+        },
+        {
+            "type": "variant_picker",
+            "name": "Variant Picker",
+            "limit": 1
+        },
+        {
+            "type": "buy_button",
+            "name": "Buy Button",
+            "limit": 1,
+            "settings": []
+        },
+        {
+            "type": "description",
+            "name": "Description",
+            "limit": 1
+        },
+        {
+            "type": "share",
+            "name": "Share",
+            "limit": 1
+        },
+        {
+            "type": "custom_liquid",
+            "name": "Custom Liquid",
+            "settings": []
+        },
+        {
+            "type": "collapsible_tab",
+            "name": "Collapsible Tab"
+        },
+        {
+            "type": "popup",
+            "name": "Popup",
+            "settings": []
+        },
+        {
+            "type": "rating",
+            "name": "Rating",
+            "limit": 1,
+            "settings": []
+        },
+        {
+            "type": "icon-with-text",
+            "name": "Icon with text",
+            "settings": []
+        }
+    ]
+}
+{% endschema %}
